@@ -5,6 +5,7 @@ let winMsg=document.querySelector(".win")
 let restartGame=document.querySelector(".restart");
 let resetGame=document.querySelector(".reset");
 let mainContainer=document.querySelector(".container-tic")
+let count=0;
 
 let winnerPatter=[
     [0, 1, 2],
@@ -31,7 +32,12 @@ boxes.forEach((box)=>{
         turnO=true;
     }
         box.disabled=true;
-        checkWinner();
+        count++;
+        let isWinner=checkWinner();
+
+        if(!isWinner && count===9){
+            showdraw();
+        }
 })
 })
 
@@ -42,12 +48,13 @@ const checkWinner=()=>{
         let pos3val=boxes[pattern[2]].innerHTML;
         if(pos1val!="" && pos2val!="" && pos3val!=""){
         if(pos1val===pos2val && pos2val===pos3val){
-            console.log("you win")
+            isWinner=true;
             console.log(`winner is ${pos1val}`)
             showWinner(pos1val);
         }
     }
     }
+   
 }
 
 const showWinner=(winner)=>{
@@ -73,6 +80,7 @@ const enablebox=()=>{
 
 const resetbtn=()=>{
     let turnO=true;
+    count=0;
     enablebox()
     message.classList.add("hide");
     mainContainer.classList.remove("hide");
@@ -82,8 +90,13 @@ const resetbtn=()=>{
 restartGame.addEventListener("click",resetbtn)
 resetGame.addEventListener("click",resetbtn)
 
+const showdraw=()=>{
+    winMsg.innerText=`Game Draw restart it....`
+    message.classList.remove("hide")
+    disablebox();
+    mainContainer.classList.add("hide");
 
-
+}
 
 
 
