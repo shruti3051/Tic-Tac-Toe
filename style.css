@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    background-color: #ade1fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+  }
+  
+  .content h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    color: #041d56;
+  }
+  
+  .content p{
+    color: #041d56;
+    font-size: 30px;
+  }
+  .image{
+    height: 70vmin;
+    width: 70vmin;
+    object-fit: contain;
+  
+  }
+  
+  .image img{
+    height: 70vmin;
+    width: 70vmin;
+    object-fit: cover;
+   
+  }
+  
+  .blinking-arrow {
+    animation: blink-colors 1s infinite;
+  }
+  
+  @keyframes blink-colors {
+    0% { color: red; }
+    25% { color: chartreuse; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: purple; }
+  }
+  
+  .content a{
+    text-decoration: none;
+  }
+  
+
+  .container-tic{
+    height: 100vh;
+    background-color: #ade1fb;
+    color: #FFFFFF;
+    text-align: center;
+    gap: 130px;
+  }
+  
+  .container-tic h1{
+    color: #041d56;
+    font-size: 30px;
+    align-content: center;
+    padding: 30px 0 0 0;
+    font-weight: 900;
+  }
+  
+  .game-section{
+    height: 80vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .games{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+  }
+  
+  .box{
+    height:18vmin;
+    width: 18vmin;
+    border-radius: 20px;
+    /* border: 12px solid black; */
+    box-shadow: 10px 10px 5px #000000;
+    font-size: 90px;
+    font-weight: 900;
+    background-color: #FFFFFF;
+  }
+  
+  .reset{
+    padding: 10px;
+      font-size: 20px;
+      background-color: brown;
+      color:white;
+  
+  }
+
+.restart{
+  padding: 10px;
+  font-size: 20px;
+  background-color: brown;
+  color:white;
+
+}
+
+.hide{
+  display: none;
+}
+
+.msg-container{
+  height: 100vh;
+  text-align: center;
+  align-content: center;
+  background-color: #ade1fb;
+color: #041d56;
+ font-size: 25px;
+}
+
+.win{
+  margin: 20px;
+}
+
+
+
+
+@media (max-width:730px) {
+
+  .container{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .content h1{
+    font-size: 60px;
+  
+  }
+  
+  .image{
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    margin: 10px;
+  }
+
+  .image img{
+    height: 77vmin;
+    width: 93vmin;
+    object-fit: cover;
+  }
+
+  .box{
+    font-size: 30px;
+  }
+
+  .container-tic{
+    align-content: center;
+
+  }
+}
+
+
+@media (max-width:950px) {
+  .container{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+}
